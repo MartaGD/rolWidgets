@@ -6,7 +6,7 @@ function addPoints(operation,house){
             hufflePoints = localStorage.getItem(house.toString());
             operation=="+"? hufflePoints++ : hufflePoints--;
             hufflePoints <= 0 ? hufflePoints = 0 : hufflePoints;
-            document.getElementById("hufflepuffPoints").innerHTML = hufflePoints;
+            animarTexto("hufflepuffPoints",hufflePoints);
             console.log("Hufflepuff:" + hufflePoints);
             // Crear una clave-valor
             localStorage.setItem(house.toString(), hufflePoints);
@@ -15,7 +15,7 @@ function addPoints(operation,house){
             ravenPoints = localStorage.getItem(house.toString());
             operation=="+"? ravenPoints++ : ravenPoints--;
             ravenPoints <= 0 ? ravenPoints = 0 : ravenPoints;
-            document.getElementById("ravenclawPoints").innerHTML = ravenPoints;
+            animarTexto("ravenclawPoints",ravenPoints);
             console.log("Ravenclaw:" + ravenPoints);
             localStorage.setItem(house.toString(), ravenPoints);
             break;
@@ -23,7 +23,7 @@ function addPoints(operation,house){
             gryfPoints = localStorage.getItem(house.toString());
             operation=="+"? gryfPoints++ : gryfPoints--;
             gryfPoints <= 0 ? gryfPoints = 0 : gryfPoints;
-            document.getElementById("gryffindorPoints").innerHTML = gryfPoints;
+            animarTexto("gryffindorPoints",gryfPoints);
             console.log("Gryffindor:" + gryfPoints);
             localStorage.setItem(house.toString(), gryfPoints);
             break;
@@ -31,7 +31,7 @@ function addPoints(operation,house){
             slythPoints = localStorage.getItem(house.toString());
             operation=="+"? slythPoints++ : slythPoints--;
             slythPoints <= 0 ? slythPoints = 0 : slythPoints;
-            document.getElementById("slytherinPoints").innerHTML = slythPoints;
+            animarTexto("slytherinPoints",slythPoints);
             console.log("Slytherin:" + slythPoints);
             localStorage.setItem(house.toString(), slythPoints);
             break;
@@ -51,10 +51,6 @@ function clearPoints(){
 
 
 }
-function onChangePoints(){
-console.log("works");
-}
-
 function onLoadPage(){
     console.log("on load");
     let hufflePoints=0, gryfPoints=0, slythPoints=0, ravenPoints=0;
@@ -69,6 +65,14 @@ function onLoadPage(){
     
 }
 
+function animarTexto(id, valor) {
+    document.getElementById(id).innerHTML = valor;
+    const texto = document.getElementById(id);
+    texto.classList.add('animado');
+    setTimeout(() => {
+      texto.classList.remove('animado');
+    }, 600)
+}
 /*
 // Eliminar una clave
 localStorage.removeItem('key');
@@ -76,6 +80,7 @@ localStorage.removeItem('key');
 // Eliminar todas las claves
 localStorage.clear();
  */
+
 
 
 

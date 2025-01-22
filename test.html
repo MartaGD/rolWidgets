@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animación de Texto</title>
+  <style>
+    #texto {
+      font-size: 16px;
+      transition: font-size 0.6s ease-in-out;
+    }
+
+    @keyframes agrandar {
+      0% { font-size: 16px; }
+      50% { font-size: 24px; }
+      100% { font-size: 16px; }
+    }
+
+    #texto.animado {
+      animation: agrandar 0.6s ease-in-out;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <p id="texto">¡Haz clic en el botón para agrandar y reducir el texto!</p>
+  <button onclick="animarTexto()">Clica Aquí</button>
+
+  <script>
+    function animarTexto() {
+      const texto = document.getElementById('texto');
+      texto.classList.add('animado');
+      setTimeout(() => {
+        texto.classList.remove('animado');
+      }, 600);
+    }
+  </script>
+</body>
+</html>
