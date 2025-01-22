@@ -2,8 +2,10 @@ function addPoints(operation,house){
     console.log("add to:"+house);
     switch(house){
         case "Hufflepuff":
+            
             hufflePoints = localStorage.getItem(house.toString());
             operation=="+"? hufflePoints++ : hufflePoints--;
+            hufflePoints <= 0 ? hufflePoints = 0 : hufflePoints;
             document.getElementById("hufflepuffPoints").innerHTML = hufflePoints;
             console.log("Hufflepuff:" + hufflePoints);
             // Crear una clave-valor
@@ -12,6 +14,7 @@ function addPoints(operation,house){
         case "Ravenclaw":
             ravenPoints = localStorage.getItem(house.toString());
             operation=="+"? ravenPoints++ : ravenPoints--;
+            ravenPoints <= 0 ? ravenPoints = 0 : ravenPoints;
             document.getElementById("ravenclawPoints").innerHTML = ravenPoints;
             console.log("Ravenclaw:" + ravenPoints);
             localStorage.setItem(house.toString(), ravenPoints);
@@ -19,6 +22,7 @@ function addPoints(operation,house){
         case "Gryffindor":
             gryfPoints = localStorage.getItem(house.toString());
             operation=="+"? gryfPoints++ : gryfPoints--;
+            gryfPoints <= 0 ? gryfPoints = 0 : gryfPoints;
             document.getElementById("gryffindorPoints").innerHTML = gryfPoints;
             console.log("Gryffindor:" + gryfPoints);
             localStorage.setItem(house.toString(), gryfPoints);
@@ -26,6 +30,7 @@ function addPoints(operation,house){
         case "Slytherin":
             slythPoints = localStorage.getItem(house.toString());
             operation=="+"? slythPoints++ : slythPoints--;
+            slythPoints <= 0 ? slythPoints = 0 : slythPoints;
             document.getElementById("slytherinPoints").innerHTML = slythPoints;
             console.log("Slytherin:" + slythPoints);
             localStorage.setItem(house.toString(), slythPoints);
