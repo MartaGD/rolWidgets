@@ -1,0 +1,25 @@
+img{
+height: 25vh;
+}
+
+.hufflepuff {
+    background-color: darkgoldenrod;
+}
+
+.ravenclaw {
+    background-color: darkblue;
+}
+
+.gryffindor {
+    background-color: darkred;
+}
+
+.slytherin {
+    background-color: darkgreen;
+}
+
+.contadorArea {
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+
+}

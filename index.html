@@ -5,10 +5,48 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script src='scripts.js'></script>
+    <!-- Compiled and minified CSS --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> <!-- Compiled and minified JavaScript --> <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
 </head>
-<body>
-    
+<body onload="onLoadPage()">
+    <div class="container">
+    <div class="row">
+        <div class="col s12 center-align"><h1 class="flow-text">Los Relojes de Arena</h1></div>
+
+        <div class="col s12 center-left">
+            <span class="flow-text"><i>«Sus triunfos les harán ganar puntos, cualquier norma sin precedentes y los perderán.»
+            —Minerva McGonagall</i></span>
+        </div>
+        <div id="HufflepuffDiv" class="hufflepuff col s3 center-align contadorArea"><span class="flow-text">
+            Hufflepuff<br>
+            <img src="./huffle.png">
+            <div class="points" id="hufflepuffPoints">0</div>
+            <button type="button" class="hoverable" onclick="addPoints('+','Hufflepuff')">+</button>
+            <button type="button" class="hoverable" onclick="addPoints('-','Hufflepuff')">-</button>
+        </span></div>
+        <div id="GryffindorDiv" class="contadorArea gryffindor col s3 center-align"><span class="flow-text"> 
+            Gryffindor<br>
+            <img src="./gryf.png">
+            <div class="points"  id="gryffindorPoints" onchange="onChangePoints()">0</div>
+            <button type="button" class="hoverable" onclick="addPoints('+','Gryffindor')">+</button>
+            <button type="button" class="hoverable" onclick="addPoints('-','Gryffindor')">-</button>
+        </span></div>
+        <div id="RavenclawDiv" class="contadorArea ravenclaw col s3 center-align"><span class="flow-text">
+            Ravenclaw<br>
+            <img src="./raven.png">
+            <div class="points"  id="ravenclawPoints">0</div>
+            <button type="button" class="hoverable" onclick="addPoints('+','Ravenclaw')">+</button>
+            <button type="button" class="hoverable" onclick="addPoints('-','Ravenclaw')">-</button>
+        </span></div>
+        <div id="SlytherinDiv" class="contadorArea slytherin col s3 center-align"><span class="flow-text">
+            Slytherin<br>
+            <img src="./slyth.png">
+            <div class="points" id="slytherinPoints">0</div>
+            <button type="button" class="hoverable" onclick="addPoints('+','Slytherin')">+</button>
+            <button type="button" class="hoverable" onclick="addPoints('-','Slytherin')">-</button>    
+        </span></div>
+      </div>
+    </div>
 </body>
 </html>
