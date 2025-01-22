@@ -8,7 +8,7 @@ body {
 img{
 height: 25vh;
 }
-
+/*
 .hufflepuff {
     background-color: darkgoldenrod;
 }
@@ -24,11 +24,38 @@ height: 25vh;
 
 .slytherin {
     background-color: darkgreen;
-}
+}*/
 
 .contadorArea {
     padding-top: 5% !important;
     padding-bottom: 5% !important;
     color: aliceblue;
-
 }
+
+/*
+  When creating your CSS selector,
+  change "brown" to something of your choosing
+  */
+  .waves-effect.waves-hufflepuff .waves-ripple {
+    /* The alpha value allows the text and background color
+    of the button to still show through. */
+     background-color: rgba(236, 174, 36, 0.65);
+   }
+
+   .waves-effect.waves-ravenclaw .waves-ripple {
+    /* The alpha value allows the text and background color
+    of the button to still show through. */
+     background-color: rgba(0, 0, 139, 0.65);
+   }
+
+   .waves-effect.waves-slytherin .waves-ripple {
+    /* The alpha value allows the text and background color
+    of the button to still show through. */
+     background-color: rgba(16, 86, 10, 0.65);
+   }
+
+   .waves-effect.waves-gryffindor .waves-ripple {
+    /* The alpha value allows the text and background color
+    of the button to still show through. */
+     background-color: rgba(86, 10, 10, 0.65);
+   }
